@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>投资偏好问卷</title>
+    <meta
+      name="description"
+      content="一个本地运行的投资/交易风格偏好自测问卷，基于 1-5 分量表生成即时报告。"
+    >
+    <link rel="icon" href="favicon.svg" type="image/svg+xml">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="workspace" aria-labelledby="app-title">
+        <header class="workspace__header">
+          <div>
+            <p class="eyebrow">本地自测 · 不上传数据</p>
+            <h1 id="app-title">投资偏好问卷</h1>
+          </div>
+          <div class="progress-panel" aria-label="答题进度">
+            <span id="progressText">0 / 20</span>
+            <div class="progress-track">
+              <div id="progressBar" class="progress-bar"></div>
+            </div>
+          </div>
+        </header>
+
+        <div class="layout">
+          <aside class="dimension-list" aria-label="量表维度">
+            <h2>维度</h2>
+            <ul id="dimensionList"></ul>
+          </aside>
+
+          <section id="questionnaire" class="question-panel" aria-live="polite">
+            <div class="question-meta">
+              <span id="questionGroup"></span>
+              <span id="questionIndex"></span>
+            </div>
+            <h2 id="questionText"></h2>
+
+            <fieldset class="scale" aria-labelledby="questionText">
+              <legend class="sr-only">请选择同意程度</legend>
+              <div id="scaleOptions" class="scale-options"></div>
+              <div class="scale-labels" aria-hidden="true">
+                <span>完全不同意</span>
+                <span>完全同意</span>
+              </div>
+            </fieldset>
+
+            <p id="questionHint" class="hint" role="status"></p>
+
+            <div class="actions">
+              <button id="prevButton" class="button button--secondary" type="button">上一题</button>
+              <button id="nextButton" class="button" type="button">下一题</button>
+            </div>
+          </section>
+
+          <section id="resultPanel" class="result-panel hidden" aria-live="polite">
+            <div class="result-heading">
+              <p class="eyebrow">测评结果</p>
+              <h2 id="profileTitle"></h2>
+              <p id="profileSummary"></p>
+            </div>
+
+            <div id="scoreList" class="score-list"></div>
+
+            <div class="result-copy">
+              <h3>偏好解读</h3>
+              <p id="profileInsight"></p>
+              <h3>行动提示</h3>
+              <p id="profileAdvice"></p>
+              <h3>风险提示</h3>
+              <p>
+                本结果仅用于投资偏好自测与投资者教育，不构成任何投资建议、资产推荐或收益承诺。
+                实际投资决策应结合个人财务状况、风险承受能力与专业意见。
+              </p>
+            </div>
+
+            <div class="actions">
+              <button id="restartButton" class="button" type="button">重新测试</button>
+            </div>
+          </section>
+        </div>
+      </section>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
