@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=1280, initial-scale=1">
+    <title>投资偏好问卷社交预览</title>
+    <style>
+      * { box-sizing: border-box; }
+      html, body { width: 1280px; height: 640px; margin: 0; overflow: hidden; }
+      body {
+        background: linear-gradient(135deg, #eef1eb, #f6f2e9);
+        color: #14221f;
+        font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", sans-serif;
+      }
+      main { position: relative; width: 100%; height: 100%; padding: 66px 64px; }
+      .tag {
+        display: inline-flex; align-items: center; justify-content: center; width: 148px; height: 38px;
+        border-radius: 19px; background: #dceeea; color: #0f6f63; font-size: 16px; font-weight: 650;
+      }
+      h1 { margin: 32px 0 0; font-size: 64px; line-height: 1.2; letter-spacing: -2px; }
+      .english { margin: 7px 0 0; color: #52615d; font-size: 22px; }
+      .rule { width: 410px; height: 1px; margin: 40px 0 22px; background: #c9d3cd; }
+      .dimensions { margin: 0 0 12px; color: #253d37; font-size: 24px; font-weight: 650; }
+      .detail { margin: 0 0 8px; color: #52615d; font-size: 21px; }
+      .privacy {
+        display: inline-flex; align-items: center; justify-content: center; height: 54px; margin-top: 74px;
+        padding: 0 42px; border-radius: 27px; background: #0f776b; color: white; font-size: 19px; font-weight: 650;
+      }
+      .screen {
+        position: absolute; top: 46px; right: 44px; width: 694px; height: 548px; padding: 12px;
+        overflow: hidden; border-radius: 28px; background: #fffdf8;
+        box-shadow: 0 18px 48px rgba(16, 46, 41, .18);
+      }
+      .screen img { width: 100%; height: 100%; object-fit: cover; object-position: center; border: 2px solid #c8d5cf; border-radius: 20px; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <div class="tag">本地自测</div>
+      <h1>投资偏好问卷</h1>
+      <p class="english">Investment Style Questionnaire</p>
+      <div class="rule"></div>
+      <p class="dimensions">20 题 · 6 个维度</p>
+      <p class="detail">价值 · 成长 · 动量 · 系统化</p>
+      <p class="detail">风险偏好 · 投资期限</p>
+      <div class="privacy">无需登录 · 答卷不上传</div>
+      <div class="screen"><img src="investment-style-result.png" alt="真实投资偏好测试六维结果页面"></div>
+    </main>
+  </body>
+</html>
